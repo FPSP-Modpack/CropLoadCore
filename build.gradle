@@ -76,7 +76,7 @@ task getThaucraftDev(type: Download, dependsOn: "getNatura") {
     onlyIf {
         !file("libs/Thaumcraft-deobf-1.7.10-4.2.3.5.jar").exists()
     }
-    src "https://minecraft.curseforge.com/projects/thaumcraft/files/2227552/download"
+    src "http://downloads.gtnewhorizons.com/Mods_for_Jenkins/Thaumcraft-1.7.10-4.2.3.5-deobf.jar"
     dest file("libs/Thaumcraft-deobf-1.7.10-4.2.3.5.jar")
     mustRunAfter "deobfBinJar"
     mustRunAfter "repackMinecraft"
