@@ -4,11 +4,7 @@ import mods.natura.common.NContent;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class RegisterNatura implements OreDictRegistrator {
-    @Override
-    public String getModWhichRegisters() {
-        return "Natura";
-    }
+public class RegisterNatura implements Runnable {
 
     @Override
     public void run() {

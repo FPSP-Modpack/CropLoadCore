@@ -1,19 +1,19 @@
 package com.github.bartimaeusnek.croploadcore.oredict;
 
-import net.minecraft.item.Item;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class RegisterVanilla {
     public static void register() {
-        OreDictionary.registerOre("cropVine", Item.getItemById(106));
-        OreDictionary.registerOre("cropVines", Item.getItemById(106));
-        OreDictionary.registerOre("cropGrass", new ItemStack(Item.getItemById(32), 1, 0));
-        OreDictionary.registerOre("cropGrass", new ItemStack(Item.getItemById(31), 1, 2));
-        OreDictionary.registerOre("cropGrass", new ItemStack(Item.getItemById(31), 1, 1));
-        OreDictionary.registerOre("cropGrass", new ItemStack(Item.getItemById(175), 1, 2));
-        OreDictionary.registerOre("cropGrass", new ItemStack(Item.getItemById(175), 1, 3));
-        OreDictionary.registerOre("cropCacti", new ItemStack(Item.getItemById(81), 1, 0));
-        OreDictionary.registerOre("cropCactus", new ItemStack(Item.getItemById(81), 1, 0));
+        OreDictionary.registerOre("cropVine", Blocks.vine);
+        OreDictionary.registerOre("cropVines", Blocks.vine);
+        OreDictionary.registerOre("cropGrass", new ItemStack(Blocks.deadbush, 1, 0));
+        OreDictionary.registerOre("cropGrass", new ItemStack(Blocks.tallgrass, 1, 2));
+        OreDictionary.registerOre("cropGrass", new ItemStack(Blocks.tallgrass, 1, 1));
+        OreDictionary.registerOre("cropGrass", new ItemStack(Blocks.double_plant, 1, 2));
+        OreDictionary.registerOre("cropGrass", new ItemStack(Blocks.double_plant, 1, 3));
+        OreDictionary.registerOre("cropCacti", Blocks.cactus);
+        OreDictionary.registerOre("cropCactus", Blocks.cactus);
     }
 }

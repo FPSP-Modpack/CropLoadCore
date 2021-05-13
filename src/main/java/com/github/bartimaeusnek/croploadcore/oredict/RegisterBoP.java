@@ -5,12 +5,7 @@ import biomesoplenty.api.content.BOPCItems;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class RegisterBoP implements OreDictRegistrator {
-
-    @Override
-    public String getModWhichRegisters() {
-        return "BiomesOPlenty";
-    }
+public class RegisterBoP implements Runnable {
 
     @Override
     public void run() {

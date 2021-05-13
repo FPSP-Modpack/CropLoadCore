@@ -4,11 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import tb.init.TBItems;
 
-public class RegisterThaumicBases implements OreDictRegistrator {
-    @Override
-    public String getModWhichRegisters() {
-        return "thaumicbases";
-    }
+public class RegisterThaumicBases implements Runnable {
 
     @Override
     public void run() {

@@ -1,6 +1,8 @@
 package com.github.bartimaeusnek.croploadcore;
 
 import com.github.bartimaeusnek.croploadcore.oredict.*;
+
+import cpw.mods.fml.common.Loader;
 import ic2.api.crops.CropCard;
 import ic2.api.crops.Crops;
 import net.minecraft.item.Item;
@@ -74,12 +76,18 @@ public class OreDict {
     public static boolean register() {
 
         if (!isregistered) {
-            new RegisterTinkersConstruct().register();
-            new RegisterThaumcraft().register();
-            new RegisterBoP().register();
-            new RegisterNatura().register();
-            new RegisterWitchery().register();
-            new RegisterThaumicBases().register();
+        	if (Loader.isModLoaded("TConstruct"))
+        		new RegisterTinkersConstruct().run();
+        	if (Loader.isModLoaded("Thaumcraft"))
+        		new RegisterThaumcraft().run();
+        	if (Loader.isModLoaded("BiomesOPlenty"))
+        		new RegisterBoP().run();
+        	if (Loader.isModLoaded("Natura"))
+        		new RegisterNatura().run();
+        	if (Loader.isModLoaded("witchery"))
+        		new RegisterWitchery().run();
+        	if (Loader.isModLoaded("thaumicbases"))
+        		new RegisterThaumicBases().run();
 
             if (!OreDictionary.getOres("cropBlackberry").isEmpty())
                 for (int i = 0; i < OreDictionary.getOres("cropBlackberry").size(); i++)

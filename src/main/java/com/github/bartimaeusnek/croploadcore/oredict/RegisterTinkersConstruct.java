@@ -4,11 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import tconstruct.world.TinkerWorld;
 
-public class RegisterTinkersConstruct implements OreDictRegistrator {
-    @Override
-    public String getModWhichRegisters() {
-        return "TConstruct";
-    }
+public class RegisterTinkersConstruct implements Runnable {
 
     @Override
     public void run() {

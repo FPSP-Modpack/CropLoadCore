@@ -4,12 +4,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import static thaumcraft.api.ItemApi.getBlock;
 
-public class RegisterThaumcraft implements OreDictRegistrator {
+public class RegisterThaumcraft implements Runnable {
 
-    @Override
-    public String getModWhichRegisters() {
-        return "Thaumcraft";
-    }
     @Override
     public void run() {
         OreDictionary.registerOre("cropShimmerleaf", getBlock("blockCustomPlant", 2));
